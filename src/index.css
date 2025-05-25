@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@layer base{
+    html{
+      @apply p-0 m-0;
+    }
+  body{
+  @apply bg-gradient-to-br from-pink-300/10 to-gray-200/10;    
+  }
+}
+.outer-container{
+  @apply w-300 mx-auto my-5 p-12 h-150 bg-white shadow-xl rounded-xl;
+}

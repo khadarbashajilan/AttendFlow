@@ -5,10 +5,11 @@ import Dashboard from './pages/Dashboard';
 import AttendanceLogs from './pages/AttendanceLogs';
 import Analytics from './pages/Analytics';
 import Layout from './components/Layout';
+// import { useNavigate } from 'react-router-dom';
+// import { useEffect } from 'react';
 
 
 function App() {
-
   return (
     <>
      <Router>

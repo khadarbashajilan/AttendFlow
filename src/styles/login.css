@@ -1,0 +1,32 @@
+/* login.css */
+@import "tailwindcss";
+/* Container with linear gradient background */
+
+
+.login-container {
+  @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-400/10 to-gray-200/10 p-4;
+}
+
+.login-inner {
+  @apply bg-white p-8 rounded-lg shadow-md w-full max-w-md space-y-6;
+}
+
+.login-title {
+  @apply text-2xl font-bold text-center;
+}
+
+.login-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.login-input {
+  @apply mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400;
+}
+
+.login-error {
+  @apply text-sm text-red-500;
+}
+
+.login-button {
+  @apply w-full bg-pink-500 text-white py-2 rounded-md hover:bg-pink-600 transition mt-6;
+}
