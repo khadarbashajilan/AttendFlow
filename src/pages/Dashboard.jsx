@@ -62,7 +62,7 @@ export default function Dashboard() { const [checkInTime, setCheckInTime] = useS
       </div>
 
       <h2 className="text-xl font-semibold mb-2">Attendance History (Last 6 Days)</h2><br />
-      <div className="flex overflow-x-auto space-x-4 pb-2 hide-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      <div className="flex overflow-x-scroll space-x-4 pb-2">
         {history.map((entry, idx) => (
           <div key={idx} className="min-w-[230px] h-[85px] bg-gray-100 p-3 rounded ">
             <p className="font-medium mb-2">{entry.date}</p>

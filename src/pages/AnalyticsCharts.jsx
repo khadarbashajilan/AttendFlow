@@ -1,46 +1,50 @@
+
 import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
   ArcElement
 } from 'chart.js';
-import { Line, Pie } from 'react-chartjs-2';
+import { Bar, Pie } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
   ArcElement
 );
 
-const lineData = {
+const barData = {
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   datasets: [
     {
       label: 'Hours Present',
       data: [8, 6, 7, 5, 9, 8],
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.4,
-      fill: false
+      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      borderColor: 'rgba(75, 192, 192, 1)',
+      borderWidth: 1,
     }
   ]
 };
 
-const lineOptions = {
+const barOptions = {
   responsive: true,
   plugins: {
     legend: { position: 'top' },
     title: { display: true, text: 'Attendance Trends Over Time' }
+  },
+  scales: {
+    y: {
+      beginAtZero: true
+    }
   }
 };
 
@@ -68,11 +72,11 @@ const pieOptions = {
 
 const AnalyticsCharts = () => {
   return (
-    <div className="h-[60%] mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="bg-white rounded-lg shadow p-4">
-        <Line data={lineData} options={lineOptions} />
+    <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="h-[300px] bg-white rounded-lg shadow p-4">
+        <Bar data={barData} options={barOptions} />
       </div>
-      <div className="bg-white rounded-lg shadow p-4">
+      <div className="h-[300px] bg-white rounded-lg px-[150px] shadow pt-5">
         <Pie data={pieData} options={pieOptions} />
       </div>
     </div>

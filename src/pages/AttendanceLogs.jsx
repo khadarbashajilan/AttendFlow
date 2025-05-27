@@ -71,7 +71,7 @@ const AttendanceLogs = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto overflow-y-hidden">
+      <div className="h-[450px] overflow-y-auto  ">
         <table className="min-w-full table-auto border border-gray-200">
           <thead>
             <tr className="bg-gray-100">
